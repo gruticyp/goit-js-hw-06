@@ -2,5 +2,9 @@
 const formInputEl = document.querySelector('#name-input');
 const spanOutputEl = document.querySelector('#name-output');
 formInputEl.addEventListener('input', event => {
-    spanOutputEl.textContent = event.target.value;
+    if (formInputEl.value.length === 0) {
+      spanOutputEl.textContent = "Anonymous"
+    } else {
+     spanOutputEl.textContent = event.target.value;
+    }
   });
